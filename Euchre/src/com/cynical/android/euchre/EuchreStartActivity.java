@@ -1,5 +1,7 @@
 package com.cynical.android.euchre;
 
+import com.cynical.android.euchre.database.EuchreDatabaseHelper;
+
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
@@ -12,14 +14,17 @@ public class EuchreStartActivity extends Activity {
 	
 	private Button startButton;
 	private Context context;
+	private EuchreDatabaseHelper db;
 	
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-        getResources().getDrawable(R.drawable.cards_clubs_6);
+        setContentView(R.layout.main);        
         context = getApplicationContext();
+        
+        db = new EuchreDatabaseHelper(context);
+        
         startButton = (Button) findViewById(R.id.startButton);
         startButton.setOnClickListener(new OnClickListener() {
 			
