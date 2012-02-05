@@ -2,8 +2,14 @@ package com.cynical.android.euchre.database;
 
 public class EuchreDatabaseConstants {
 	
+	//////////////////////////////////////////////
+	//	Table name
+	//////////////////////////////////////////////
 	static final String STATS_TABLE_NAME = "STATS";
-
+	
+	//////////////////////////////////////////////
+	// Column names
+	//////////////////////////////////////////////
 	static final String PRIMARY_KEY = "_id";
 	static final String DATE_KEY = "DATE";
 	static final String PARTNER_KEY = "PARTNER";
@@ -13,6 +19,9 @@ public class EuchreDatabaseConstants {
 	static final String SETS_FOR_KEY = "SETS_FOR";
 	static final String SETS_AGAINST_KEY = "SETS_AGAINST";
 	
+	///////////////////////////////////////////////
+	//	Column configuration
+	///////////////////////////////////////////////
 	static final String PRIMARY_KEY_COLUMN = PRIMARY_KEY + " INTEGER PRIMARY KEY AUTOINCREMENT";
 	static final String DATE_COLUMN = DATE_KEY + " STRING NOT NULL";
 	static final String PARTNER_COLUMN = PARTNER_KEY + " STRING NOT NULL";
