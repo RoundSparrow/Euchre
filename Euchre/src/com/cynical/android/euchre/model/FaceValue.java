@@ -15,6 +15,10 @@ public enum FaceValue {
 		this.value = value;
 	}
 
+	/**
+	 * Gets the value of the card
+	 * @return The value of the card
+	 */
 	public int getValue() {
 		return value;
 	}

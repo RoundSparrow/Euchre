@@ -10,6 +10,11 @@ public class Card {
 		this.value = value;
 	}
 	
+	/**
+	 * Checks if the card is the right bower
+	 * @param trump The suit that is currently trump
+	 * @return True, if the card is the right bower
+	 */
 	public boolean isRightBower(Suit trump) {
 		if(suit == trump) {
 			return value.equals(FaceValue.JACK);
@@ -17,6 +22,11 @@ public class Card {
 		return false;
 	}
 	
+	/**
+	 * Checks if the card is the left bower
+	 * @param trump The suit that is currently trump
+	 * @return True, if the card is the left bower
+	 */
 	public boolean isLeftBower(Suit trump) {
 		if(value.equals(FaceValue.JACK)) {
 			if(trump.isBlack()) {
@@ -29,14 +39,27 @@ public class Card {
 		return false;
 	}
 	
+	/**
+	 * Checks if the card is trump
+	 * @param trump The suit that is currently trump
+	 * @return True, if the card's suit is considered trump
+	 */
 	public boolean isTrump(Suit trump) {
 		return suit.equals(trump) || isLeftBower(trump);
 	}
 	
+	/**
+	 * Checks if the card's suit is red
+	 * @return True, if the card's suit is red
+	 */
 	public boolean isRed() {
 		return suit.isRed();
 	}
 	
+	/**
+	 * Checks if the card's suit is black
+	 * @return True, if the card's suit is black
+	 */
 	public boolean isBlack() {
 		return suit.isBlack();
 	}
