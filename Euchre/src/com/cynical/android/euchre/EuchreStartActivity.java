@@ -1,8 +1,11 @@
 package com.cynical.android.euchre;
 
+import com.cynical.android.euchre.model.CardDeck;
+
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -25,6 +28,8 @@ public class EuchreStartActivity extends Activity {
 			
 			public void onClick(View v) {
 				Toast.makeText(context, "Start Button Pressed", Toast.LENGTH_LONG).show();
+				CardDeck deck = new CardDeck();
+				Log.d("TEST", "This is a test");
 			}
 		});
     }
