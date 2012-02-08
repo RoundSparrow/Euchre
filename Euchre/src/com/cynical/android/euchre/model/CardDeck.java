@@ -34,7 +34,7 @@ public class CardDeck {
 	 * such as cards being stuck together, or not cutting the deck perfectly in half.
 	 * @param times The number of times to shuffle the deck
 	 */
-	public void realisticShuffle(int times) { //TODO:	Implement random "over-hand" shuffle
+	public void realisticShuffle(int times) {
 		Random rand = new Random();
 		
 		for(int t = 0; t < times; t++) {
@@ -83,6 +83,35 @@ public class CardDeck {
 					while(!s1.isEmpty()) {
 						deck.push(s1.pop());
 					}
+				}
+			}
+			
+			//	Over-hand shuffle
+			for(int i = 0; i < 3; i++) {
+				Stack<Card> top = new Stack<Card>();
+				Stack<Card> movingStack = new Stack<Card>();
+				int start = rand.nextInt(NUM_OF_CARDS);
+				int size = rand.nextInt(5) + 1;
+				
+				// Take top portion off the deck
+				for(int j = 0; j < start; j++) {
+					top.push(deck.pop());
+				}
+				// Take section to move off the deck
+				for(int j = 0; j < size; j++) {
+					try {
+						movingStack.push(deck.pop());
+					} catch(EmptyStackException e) {
+						break;
+					}
+				}
+				// Put top section back on deck
+				while(!top.isEmpty()) {
+					deck.push(top.pop());
+				}
+				// Put the moved section on top of the "top section"
+				while(!movingStack.isEmpty()) {
+					deck.push(movingStack.pop());
 				}
 			}
 		}
