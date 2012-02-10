@@ -1,9 +1,13 @@
 package com.cynical.android.euchre.model;
 
+import com.cynical.android.euchre.player.Player;
+
 public class Card {	
 	
 	private Suit suit;
 	private FaceValue value;
+	
+	private Player owner;
 	
 	public Card(FaceValue value, Suit suit) {
 		this.suit = suit;
@@ -79,7 +83,13 @@ public class Card {
 	public void setValue(FaceValue value) {
 		this.value = value;
 	}
-	
-	
+
+	public Player getOwner() {
+		return owner;
+	}
+
+	public void setOwner(Player owner) {
+		this.owner = owner;
+	}	
 	
 }
