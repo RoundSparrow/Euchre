@@ -1,4 +1,4 @@
-package com.cynical.android.euchre.model;
+package com.cynical.android.euchre.domain;
 
 public enum Suit {
 	

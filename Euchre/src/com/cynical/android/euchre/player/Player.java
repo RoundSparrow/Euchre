@@ -1,7 +1,7 @@
 package com.cynical.android.euchre.player;
 
-import com.cynical.android.euchre.model.Card;
-import com.cynical.android.euchre.model.Suit;
+import com.cynical.android.euchre.domain.Card;
+import com.cynical.android.euchre.domain.Suit;
 
 public interface Player {
 	

@@ -1,7 +1,5 @@
 package com.cynical.android.euchre;
 
-import com.cynical.android.euchre.model.CardDeck;
-
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
@@ -10,6 +8,8 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.cynical.android.euchre.domain.CardDeck;
 
 public class EuchreStartActivity extends Activity {
 	
