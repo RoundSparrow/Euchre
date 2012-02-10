@@ -5,13 +5,13 @@ import com.cynical.android.euchre.player.Player;
 public class Card {	
 	
 	private Suit suit;
-	private FaceValue value;
+	private FaceValue rank;
 	
 	private Player owner;
 	
 	public Card(FaceValue value, Suit suit) {
 		this.suit = suit;
-		this.value = value;
+		this.rank = value;
 	}
 	
 	/**
@@ -21,7 +21,7 @@ public class Card {
 	 */
 	public boolean isRightBower(Suit trump) {
 		if(suit == trump) {
-			return value.equals(FaceValue.JACK);
+			return rank.equals(FaceValue.JACK);
 		}
 		return false;
 	}
@@ -32,7 +32,7 @@ public class Card {
 	 * @return True, if the card is the left bower
 	 */
 	public boolean isLeftBower(Suit trump) {
-		if(value.equals(FaceValue.JACK)) {
+		if(rank.equals(FaceValue.JACK)) {
 			if(trump.isBlack()) {
 				return trump.equals(Suit.CLUBS) ? suit.equals(Suit.SPADES) : suit.equals(Suit.CLUBS);
 			}
@@ -76,12 +76,12 @@ public class Card {
 		this.suit = suit;
 	}
 
-	public FaceValue getValue() {
-		return value;
+	public FaceValue getRank() {
+		return rank;
 	}
 
-	public void setValue(FaceValue value) {
-		this.value = value;
+	public void setRank(FaceValue rank) {
+		this.rank = rank;
 	}
 
 	public Player getOwner() {
