@@ -2,17 +2,19 @@ package com.cynical.android.euchre.domain;
 
 public enum FaceValue {
 	
-	NINE (9),
-	TEN (10),
-	JACK (11),
-	QUEEN (12),
-	KING (13),
-	ACE (14);
+	NINE (9, "Nine"),
+	TEN (10, "Ten"),
+	JACK (11, "Jack"),
+	QUEEN (12, "Queen"),
+	KING (13, "King"),
+	ACE (14, "Ace");
 
 	private int value;
+	private String name;
 	
-	FaceValue(int value) {
+	FaceValue(int value, String name) {
 		this.value = value;
+		this.name = name;
 	}
 
 	/**
@@ -23,4 +25,8 @@ public enum FaceValue {
 		return value;
 	}
 
+	public String toString() {
+		return name;
+	}
+	
 }
