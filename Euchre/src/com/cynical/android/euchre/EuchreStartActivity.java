@@ -24,7 +24,7 @@ public class EuchreStartActivity extends Activity {
         startButton.setOnClickListener(new OnClickListener() {
 			
 			public void onClick(View v) {
-				Toast.makeText(context, "Start Button Pressed", Toast.LENGTH_LONG).show();
+				Toast.makeText(context, "Start Button Pressed (TEST)", Toast.LENGTH_LONG).show();
 			}
 		});
     }
