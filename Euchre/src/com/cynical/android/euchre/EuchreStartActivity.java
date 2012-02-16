@@ -8,8 +8,6 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.cynical.android.euchre.domain.CardDeck;
-
 public class EuchreStartActivity extends Activity {
 	
 	private Button startButton;
