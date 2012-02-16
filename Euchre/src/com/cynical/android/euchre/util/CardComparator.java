@@ -7,7 +7,7 @@ import com.cynical.android.euchre.domain.Suit;
 
 /**
  * A Card Comparator used for comparing cards in the game of euchre. Make sure to set the trump suit and 
- * the suit that was lead that hand in order for the comparator to work correctly.
+ * the suit that was led that hand in order for the comparator to work correctly.
  * 
  * @author Adam Benjamin
  * 
