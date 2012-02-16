@@ -25,6 +25,7 @@ public class EuchreStartActivity extends Activity {
 			
 			public void onClick(View v) {
 				Toast.makeText(context, "Start Button Pressed", Toast.LENGTH_LONG).show();
+				
 			}
 		});
     }
