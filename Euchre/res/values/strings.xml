@@ -3,5 +3,7 @@
 
     <string name="hello">Hello World, EuchreStartActivity!</string>
     <string name="app_name">Euchre</string>
+    <string name="connect">Connect</string>
+    <string name="quit">Quit</string>
 
 </resources>

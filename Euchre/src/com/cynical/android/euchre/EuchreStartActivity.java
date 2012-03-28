@@ -1,33 +1,39 @@
 package com.cynical.android.euchre;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
 public class EuchreStartActivity extends Activity {
 	
-	private Button startButton;
-	private Context context;
+	Button connectButton;
+	Button quitButton;
 	
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);        
-        context = getApplicationContext();
+        setContentView(R.layout.main);  
         
-        startButton = (Button) findViewById(R.id.startButton);
-        startButton.setOnClickListener(new OnClickListener() {
+        connectButton = (Button) findViewById(R.id.main_connect_button);
+        quitButton = (Button) findViewById(R.id.main_quit_button);
+        
+        connectButton.setOnClickListener(new View.OnClickListener() {
 			
 			public void onClick(View v) {
-				Toast.makeText(context, "Start Button Pressed", Toast.LENGTH_LONG).show();
-				
+				Toast.makeText(getApplicationContext(), "Connect", Toast.LENGTH_LONG).show();
 			}
 		});
+        
+        quitButton.setOnClickListener(new View.OnClickListener() {
+			
+			public void onClick(View v) {
+				finish();
+			}
+		});
+        
     }
     
     
