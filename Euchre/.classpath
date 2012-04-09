@@ -11,5 +11,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry combineaccessrules="false" kind="src" path="/EuchreCore"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/EuchreNetty"/>
+	<classpathentry kind="lib" path="/Libs/Echure/netty-3.3.1.Final.jar" sourcepath="/Libs/Echure/netty-3.3.1.Final-sources.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

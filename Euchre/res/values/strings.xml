@@ -5,5 +5,7 @@
     <string name="app_name">Euchre</string>
     <string name="connect">Connect</string>
     <string name="quit">Quit</string>
+    <string name="username">Username</string>
+    <string name="EuchreNetworkServiceDescription">Will handle all remote server communication</string>
 
 </resources>
