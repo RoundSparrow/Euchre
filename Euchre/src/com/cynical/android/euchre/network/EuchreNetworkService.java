@@ -48,6 +48,14 @@ public class EuchreNetworkService extends Service {
 			return getService().sendCommand(command, model);
 			
 		}
+		
+		public boolean connectToServer() {
+			return getService().connectToServer();
+		}
+		
+		public boolean isConnected() {
+			return getService().isConnected();
+		}
 	}
 
 	@Override
@@ -58,6 +66,10 @@ public class EuchreNetworkService extends Service {
 	@Override
 	public void onCreate() {
 		
+		
+	}
+	
+	public boolean connectToServer() {
 		bootstrap.setPipelineFactory(new ChannelPipelineFactory() {
 			
 			public ChannelPipeline getPipeline() throws Exception {
@@ -91,6 +103,8 @@ public class EuchreNetworkService extends Service {
     	else {
 			Log.e("ERROR", "Could not connect to server");
 		}
+    	
+    	return isConnected();
 	}
 	
 	public boolean isConnected() {
