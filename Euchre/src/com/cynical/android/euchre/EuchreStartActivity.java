@@ -35,6 +35,8 @@ public class EuchreStartActivity extends Activity {
 	
 	ProgressDialog connectingDialog;
 	
+	ServiceConnection connection;
+	
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -96,7 +98,7 @@ public class EuchreStartActivity extends Activity {
         
         //	Bind to Network service
         Intent i = new Intent(this, EuchreNetworkService.class);
-        ServiceConnection connection = new ServiceConnection() {			
+        connection = new ServiceConnection() {			
 			public void onServiceDisconnected(ComponentName name) {
 				binder = null;
 				serviceBound = false;
@@ -134,4 +136,13 @@ public class EuchreStartActivity extends Activity {
 			}
 		});
     }
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		if(connection != null) {
+			unbindService(connection);
+			connection = null;
+		}
+	}
 }
